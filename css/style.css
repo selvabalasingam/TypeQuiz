@@ -42,3 +42,12 @@ a {
 a:hover { 
     color: white;
 }
+
+#feedback {
+	letter-spacing: 1px;
+	font-family: helvetica, verdana, sans-serif;
+	font-size: 1.25em;
+	font-weight: bold;
+	margin-left: 36.39em;
+	color: #FFCC66;
+}
