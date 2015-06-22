@@ -1,0 +1,44 @@
+.titleBar {
+	border-bottom: solid 0.3em #BABABA; 
+	color: #BABABA;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 2.75em;
+	font-family: helvetica, verdana, sans-serif;
+	background-color: #FFFFFF;
+	letter-spacing: .1em;
+}
+
+#title {
+	padding: 1em 0em;
+	margin: auto;
+}
+
+body {
+	background-color: #FF3333;
+}
+
+.black {
+	padding-top: 1em;
+	font-size: 1.25em;
+	margin-left: 11.5em;
+}
+
+.black li {
+	list-style-type: none; /*removes the ugly bullets*/
+	display: inline-block; /*places unordered list horizontal*/
+	font-family: helvetica, verdana, sans-serif;
+	font-weight: bold;
+	padding-right: 7em;
+	letter-spacing: 1px;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+a:hover { 
+    color: white;
+}
