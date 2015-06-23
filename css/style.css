@@ -1,7 +1,6 @@
 .titleBar {
 	border-bottom: solid 0.3em #BABABA; 
 	color: #BABABA;
-	text-align: center;
 	text-transform: uppercase;
 	font-weight: bold;
 	font-size: 2.75em;
@@ -11,44 +10,94 @@
 }
 
 #title {
-	padding: 1em 0em;
-	margin: auto;
+	padding: 0.75em 0.75em 0.75em 7.5em;
+	margin: auto; 
 }
 
 body {
 	background-color: #FF3333;
-	margin: 0;
+	margin: 0; /*-- This removes the red border around the white titleBar--*/
 }
 
-.black {
-	padding-top: 1em;
-	font-size: 1.25em;
-	margin-left: 11.5em;
+.question{
+	float: left; /*-- This moves the score beside the question--*/
+	padding-right: 8.7em;
 }
 
-.black li {
-	list-style-type: none; /*removes the ugly bullets*/
-	display: inline-block; /*places unordered list horizontal*/
+.score {
+	float: left;
+	padding-right: 8.7em;
+	letter-spacing: 0.1em;
+}
+
+.stats {
 	font-family: helvetica, verdana, sans-serif;
 	font-weight: bold;
-	padding-right: 7em;
 	letter-spacing: 1px;
+	font-size: 1.25em;
+	margin-left: 16.9em;
+	margin-top: 1.6em;
 }
 
-a {
-	text-decoration: none;
+.restartGame {
 	color: black;
-}
-
-a:hover { 
-    color: white;
-}
-
-#feedback {
-	letter-spacing: 1px;
+	text-decoration:none;
 	font-family: helvetica, verdana, sans-serif;
-	font-size: 1.25em;
 	font-weight: bold;
-	margin-left: 36.39em;
-	color: #FFCC66;
+	letter-spacing: 0.1em;
+	font-size: 1em;
+}
+
+a:hover{
+	color: #FFCC00;
+}
+
+.letterA {
+	font-size: 40em;
+	float: left; /*-- This moves the score beside the question--*/
+	position: relative; /*-- This and the top code below moves the "a" up and to the right by using left--*/
+	top: -915px;
+	left: 40px;
+	color: white;
+	padding-right: 55px; /*-- to push lorem ipsum farther to the right--*/
+}
+
+.lorem {
+	margin: 2.5em 5em;
+	font-size: 1.5em;
+	width: 900px; /*-- to avoid the text from shifting around when you resize your window--*/
+}
+
+.choices button {
+	padding:10px 40px;
+	background-color: #33B9B5;
+	border: 2px solid #FFCC00;
+	color: white;
+	text-decoration:none;
+	font-family: helvetica, verdana, sans-serif;
+	font-weight: bold;
+	letter-spacing: 0.2em;
+	font-size: 1em;
+	margin-right: 1em;
+	position: relative;
+	left: 170px;
+	outline: none; /*-- removes the ugly blue glow effect--*/
+	cursor: pointer; /*-- shows a hand pointing--*/
+}
+
+button:hover{
+	color:#FFCC00;
+	background-color: black;
+}
+
+.comment {
+	font-family: helvetica, verdana, sans-serif;
+	font-weight: medium;
+	letter-spacing: 1px;
+	font-size: 1.25em;
+	margin: 2em 5em;
+	width: 900px;
+	text-align: right;
+	color: white;
+
 }
