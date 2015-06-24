@@ -1,3 +1,7 @@
+html { 
+  height: 100%; /*-- This removes the extra empty space that scrolls past the design of quiz / Less unnecessary scrolling--*/
+}
+
 .titleBar {
 	border-bottom: solid 0.3em #BABABA; 
 	color: #BABABA;
@@ -52,7 +56,7 @@ a:hover{
 	color: #FFCC00;
 }
 
-.letterA {
+#letterA {
 	font-size: 40em;
 	float: left; /*-- This moves the score beside the question--*/
 	position: relative; /*-- This and the top code below moves the "a" up and to the right by using left--*/
@@ -62,7 +66,7 @@ a:hover{
 	padding-right: 55px; /*-- to push lorem ipsum farther to the right--*/
 }
 
-.lorem {
+#lorem {
 	margin: 2.5em 5em;
 	font-size: 1.5em;
 	width: 900px; /*-- to avoid the text from shifting around when you resize your window--*/
