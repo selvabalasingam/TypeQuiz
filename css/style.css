@@ -105,3 +105,23 @@ button:hover{
 	color: white;
 
 }
+
+.garamond {
+	font-family: Garamond;
+}
+
+.helvetica {
+	font-family: helvetica;
+}
+
+.times {
+	font-family: times;
+}
+
+.verdana {
+	font-family: verdana;
+}
+
+.arial {
+	font-family: arial;
+}

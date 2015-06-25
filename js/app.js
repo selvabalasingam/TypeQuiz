@@ -13,26 +13,30 @@ resetCounters();
 
 // Questions and answers
 function Font (minisculeA, loremText, answers, correct) {
-	this.minisculeA = minisculeA;
-	this.loremText = loremText;
-	this.answers = answers;
-	this.correct = correct;
+    this.minisculeA = minisculeA;
+    this.loremText = loremText;
+    this.answers = answers;
+    this.correct = correct;
 }
 
-var typeface = new Array(); //HELVETICA
+var typeface = new Array(); //GARAMOND
 typeface[1] = new Font(
-	document.getElementById('#letterA').style="font-family:helvetica;"
-	document.getElementById('#lorem').style="font-family:helvetica;"
-	["Verdana", "Gotham", "Helvetica"]
-	"Helvetica"
+    ".garamond",
+    ".garamond",
+    ["Verdana", "Garamond", "Helvetica"],
+    "Garamond"
 );
+console.log(typeface);
 
-typeface[2] = new Font( //HELVETICA
-	document.getElementById('#letterA').style="font-family:garamond;"
-	document.getElementById('#lorem').style="font-family:garamond;"
-	["Serifa", "Garamond", "Century"]
-	"Garamond"
+var typeface = new Array(); //HELVETICA
+typeface[2] = new Font(
+    ".helvetica",
+    ".helvetica",
+    ["Baskerville", "Sans-serif", "Helvetica"],
+    "Helvetica"
 );
+console.log(typeface);
+
 
 
 // Make each question text change font and buttons
