@@ -4,9 +4,9 @@ $(document).ready(function(){
 var counter;
 var score;
 var resetCounters = function () {
-	counter = 1;
+	counter =" "1; // the empty quotes add an extra space infront of the 1 (so all text is not squished together)
 	$('.questionCount').text(counter);
-	score = 0;
+	score =" "0;
 	$('.scorePercentage').text(score);
 }
 resetCounters();
