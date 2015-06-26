@@ -57,13 +57,13 @@ a:hover{
 }
 
 #letterA {
-	font-size: 40em;
+	font-size: 30em;
 	float: left; /*-- This moves the score beside the question--*/
 	position: relative; /*-- This and the top code below moves the "a" up and to the right by using left--*/
-	top: -915px;
-	left: 40px;
+	top: -700px;
+	left: 35px;
 	color: white;
-	padding-right: 55px; /*-- to push lorem ipsum farther to the right--*/
+	padding-right: 70px; /*-- to push lorem ipsum farther to the right--*/
 }
 
 #lorem {

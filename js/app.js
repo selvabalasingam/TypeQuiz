@@ -4,10 +4,10 @@ $(document).ready(function(){
 var counter;
 var score;
 var resetCounters = function () {
-	counter =" "1; // the empty quotes add an extra space infront of the 1 (so all text is not squished together)
-	$('.questionCount').text(counter);
-	score =" "0;
-	$('.scorePercentage').text(score);
+    counter = 1; // the empty quotes add an extra space infront of the 1 (so all text is not squished together)
+    $('.questionCount').text(counter);
+    score = 0;
+    $('.scorePercentage').text(score);
 }
 resetCounters();
 
@@ -66,41 +66,37 @@ console.log(typeface);
 
 // Question Count updated per each question
 var guessNumber = function() {
-	counter += 1; 
-	$('.questionCount').text(counter);
+    counter += 1; 
+    $('.questionCount').text(counter);
 };
 
 // Score updated per each question
 var addPoints = function() {
-	score += 20; /* means counter = counter + amount; (increment by 20) */
-	$('.scorePercentage').text(score);
+    score += 20; /* means counter = counter + amount; (increment by 20) */
+    $('.scorePercentage').text(score);
 };
 
 // Feedback
 var correct = function(text, color){ /*--- to change the feedback everytime user enters number ---*/
-	$(".feedback").text("Correct!");
+    $(".feedback").text("Correct!");
 }
 
 var wrong = function(text, color){ /*--- to change the feedback everytime user enters number ---*/
-	$(".feedback").text("Wrong!");
+    $(".feedback").text("Wrong!");
 }
 
 var introLine = function(text, color){ /*--- to change the feedback everytime user enters number ---*/
-	$(".feedback").text("Let the games begin!");
+    $(".feedback").text("Let the games begin!");
 }
 
 // Restart button
 $(".restartGame").click(function(){
-	counter = 1;
-	score = 0;
-	introLine("Make a guess!"); //Replaces current header
+    counter = 1;
+    score = 0;
+    introLine("Make a guess!"); //Replaces current header
 });
 
 // last page (empty) shows only final score + Final comment + Restart button (in big bold letters)
 
 
 });
-
-
-
-
