@@ -93,7 +93,7 @@ var introLine = function(text, color){ /*--- to change the feedback everytime us
 $(".restartGame").click(function(){
     counter = 1;
     score = 0;
-    introLine("Make a guess!"); //Replaces current header
+    introLine(); //Replaces current header
 });
 
 // last page (empty) shows only final score + Final comment + Restart button (in big bold letters)
