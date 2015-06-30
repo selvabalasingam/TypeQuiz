@@ -9,7 +9,7 @@ Quiz.prototype = {
     getScore: function() {
         var total = this.questions.length;
         var correct = this.getTotalCorrect();
-        $('.scorePercentage').text(return correct / total * 100);
+        $('.scorePercentage').text(correct / total * 100);
     },
     getTotalCorrect: function() {
         return this.questions.filter(function(q) {
