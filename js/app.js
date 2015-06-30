@@ -19,7 +19,7 @@ Quiz.prototype = {
     }
 };
 
-// Formatting the questions
+// Questions
 var Question = function(options) {
     this.a = options.a; //transform font type for letter "a"
     this.lorem = options.lorem; // transform font type for the lorem ipsum text
