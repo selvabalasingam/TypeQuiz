@@ -4,20 +4,79 @@ $(document).ready(function(){
 var counter;
 var score;
 var resetCounters = function () {
-    counter = 1; // the empty quotes add an extra space infront of the 1 (so all text is not squished together)
+    counter = 1; 
     $('.questionCount').text(counter);
     score = 0;
     $('.scorePercentage').text(score);
 }
 resetCounters();
 
-// Questions and answers (Make each question text change font and buttons)
-function Font (minisculeA, loremText, answers, correct) {
-    this.minisculeA = minisculeA;
-    this.loremText = loremText;
-    this.answers = answers;
-    this.correct = correct;
-}
+////// beginning matthew //////
+
+var Quiz = function(questions) {
+    this.questions = questions; // array of Questions.
+};
+
+Quiz.prototype = {
+    getScore: function() {
+        var total = this.questions.length;
+        var correct = this.getTotalCorrect();
+
+        return correct / total;
+    },
+    getTotalCorrect: function() {
+        return this.questions.filter(function(q) {
+            return q.isCorrect();
+        }).length;
+    }
+};
+
+    
+var Question = function(options) {
+    this.question = options.question; // question
+    this.choices = options.choices; // choices
+    this.correctChoice = options.correctChoice; // this correct
+    this.answer = null; // this what the user chooses
+};
+
+Question.prototype = {
+    answer: function(choice) {
+        this.answer = choice;
+    },
+    isCorrect: function() {
+        return this.answer == this.correctChoice;
+    }
+};
+
+/////////////////////////////////
+var questions = [
+    new Question({
+        question: 'What font is this?',
+        choices: ['arial', 'times', 'helvetica'],
+        correct: 'arial'
+    }),
+    new Question({
+        question: 'What font is this?',
+        choices: ['arial', 'times', 'helvetica'],
+        correct: 'arial'
+    })
+    //, ...
+
+];
+var quiz = new Quiz(questions);
+
+/// buttons
+
+var choices = quiz.questions[0].choices;
+$('button.choice').each(function(i) {
+    $(this).text(choices[i]);
+}); 
+
+$('button.choice').click(function(e) {
+    var choice = $(e.target).text();
+});
+
+///// end matthew ///////
 
 var typeface = new Array(); //GARAMOND
 typeface[1] = new Font(
@@ -28,8 +87,7 @@ typeface[1] = new Font(
 );
 console.log(typeface);
 
-var typeface = new Array(); //HELVETICA
-typeface[2] = new Font(
+typeface[2] = new Font(  //HELVETICA
     ".helvetica",
     ".helvetica",
     ["Baskerville", "Sans-serif", "Helvetica"],

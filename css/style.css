@@ -68,7 +68,7 @@ a:hover{
 
 #lorem {
 	margin: 2.5em 5em;
-	font-size: 1.5em;
+	font-size: 1.6em;
 	width: 900px; /*-- to avoid the text from shifting around when you resize your window--*/
 }
 
@@ -94,7 +94,7 @@ button:hover{
 	background-color: black;
 }
 
-.comment {
+.feedback {
 	font-family: helvetica, verdana, sans-serif;
 	font-weight: medium;
 	letter-spacing: 1px;
