@@ -85,10 +85,18 @@ var renderChoices = function(question) {
 };
 
 var renderText = function(question) {
+<<<<<<< HEAD
     this.fontStyle = question.fontStyle; // need to add the font-face style to the div.text element 
     this.loremText = question.loremText; // (we already have the lorem text there... and we can remove all those )
     $(".text").text(question); // section tags you have in your html
 };
+=======
+    // need to add the font-face style to the div.text element 
+    // (we already have the lorem text there... and we can remove all those )
+    // section tags you have in your html
+};
+
+>>>>>>> 1eef972af8a8cdd3143d4515668f1d064612a237
 
 $('button.choice').click(function(e) {
     var choice = $(e.target).text();
