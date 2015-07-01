@@ -86,26 +86,10 @@ var renderChoices = function(question) {
 
 // Render font for each question
 var renderText = function(question) {
-    this.fontStyle = $('.text').css('font-family');
+    $('.text').css('font-family');
+        $(this).text(question);
 };
 
-var typeface = new Quiz([
-    new Question({
-        fontStyle: 'garamond'
-    }),
-    new Question({
-        fontStyle: 'helvetica'
-    }),
-    new Question({
-        fontStyle: 'times'
-    }),
-    new Question({
-        fontStyle: 'verdana'
-    }),
-    new Question({
-        fontStyle: 'arial'
-    }),
-]);
 
 $('button.choice').click(function(e) {
     var choice = $(e.target).text();
