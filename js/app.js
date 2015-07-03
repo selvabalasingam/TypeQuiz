@@ -79,19 +79,19 @@ var quiz = new Quiz([
 
 // Render font for each question
 var renderText = function(question) {
-    $('.text').css('font-family');
-        $(this).text(question);
+    $('.text').css('font-family', question.correctChoice);
+        renderText(quiz.getCurrentQuestion());
 };
 
 // Button
+var choices = quiz.questions[0].choices; // set the answer on the question object
+$('button.choice').each(function(i) {
+    $(this).text(choices[i]);
+}); 
+
 $('button.choice').click(function(e) {
     var choice = $(e.target).text();
-    var question = quiz.getCurrentQuestion();
-    var renderChoices = function(question) { // set the answer on the question object
-        $('button.choice').each(function(i) { // then go to the next question
-            $(this).text(question.choices[i]); // then render the buttons and set the text font face
-    });
-    };
+    var question = quiz.getCurrentQuestion(); // then go to the next question
 });
 
 // Feedback
