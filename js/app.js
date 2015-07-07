@@ -4,16 +4,13 @@ var Quiz = function(questions) {
     this.questions = questions; // array of Questions.
     this.current = 0;
 };
-//
-// $('.questionCount').text(total);
-// $('.scorePercentage').text(correct / total * 100);
 
 // Begin counter at 1 and score at 0
 Quiz.prototype = {
     getScore: function() {
         var total = this.questions.length;
         var correct = this.getTotalCorrect();
-        return correct / total;
+        return correct / total * 100;
     },
     getTotalCorrect: function() {
         return this.questions.filter(function(q) {
@@ -91,7 +88,18 @@ $('button.choice').each(function(i) {
 
 $('button.choice').click(function(e) {
     var choice = $(e.target).text();
-    var question = quiz.getCurrentQuestion(); // then go to the next question
+    var question = quiz.getCurrentQuestion(); 
+    // check if the answer is right and update question number and score
+    if (Question.answer == choice) {
+        getTotalCorrect = $('.questionCount').text(getTotalCorrect+1); 
+        getScore = $('.scorePercentage').text(getScore);
+    }
+    else {
+        getTotalCorrect = $('.questionCount').text(getTotalCorrect+0); 
+        getScore = $('.scorePercentage').text(getScore);
+    }
+    // then go to the next question
+    getNextQuestion();
 });
 
 // Feedback
@@ -115,7 +123,6 @@ $(".restartGame").click(function(){
     introLine(); //Replaces current header
 });
 
-// render the button choices and set the text font-face
 
 
 });
