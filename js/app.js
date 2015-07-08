@@ -97,6 +97,7 @@ $('button.choice').click(function(e) {
     $('.scorePercentage').text(quiz.getScore());
     quiz.getNextQuestion(); // load the next question
     renderText(quiz.getCurrentQuestion()); // render the new font
+    renderButtons(quiz.getCurrentQuestion()); // render the new button
 });
 
 // Feedback
