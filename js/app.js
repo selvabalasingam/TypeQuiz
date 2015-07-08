@@ -77,7 +77,6 @@ var quiz = new Quiz([
 // Render font for each question
 var renderText = function(question) {
     $('.text').css('font-family', question.correctChoice);
-        renderText(quiz.getCurrentQuestion());
 };
 
 // Button
