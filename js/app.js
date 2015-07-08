@@ -82,9 +82,9 @@ var renderText = function(question) {
 
 // Button
 var renderButtons = function(question) { // set the answer on the question object
+    var choices = quiz.questions[0].choices; 
     $('button.choice').each(function(i) {
         $(this).text(choices[i]);
-        renderButtons(quiz.getCurrentQuestion());
     });
 };
 
@@ -96,8 +96,8 @@ $('button.choice').click(function(e) {
     $('.questionCount').text(quiz.getTotalCorrect());
     $('.scorePercentage').text(quiz.getScore());
     quiz.getNextQuestion(); // load the next question
-    renderText(quiz.getCurrentQuestion()); // render the new font
-    renderButtons(quiz.getCurrentQuestion()); // render the new button
+    renderText(quiz.getCurrentQuestion()); // render new font
+    renderButtons(quiz.getCurrentQuestion()); // render new button
 });
 
 // Feedback
