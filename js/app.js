@@ -94,12 +94,11 @@ $('button.choice').click(function(e) {
     $('.questionCount').text(quiz.getTotalCorrect());
     $('.scorePercentage').text(quiz.getScore());
     quiz.getNextQuestion(); // load the next question
+    renderText(quiz.getCurrentQuestion()); // render the new font
 });
 
 // Feedback
-var correct = function(text, color){ /*--- to change the feedback everytime user enters number ---*/
-    $(".feedback").text("Correct!");
-}
+
 
 var wrong = function(text, color){ /*--- to change the feedback everytime user enters number ---*/
     $(".feedback").text("Wrong!");
@@ -113,10 +112,7 @@ var introLine = function(text, color){ /*--- to change the feedback everytime us
 $(".restartGame").click(function(){
     $('.questionCount').text("1");
     $('.scorePercentage').text("0");
-    // reset the quiz
-    introLine(); //Replaces current header
+    //Reset First question to Garamond
 });
-
-
 
 });
