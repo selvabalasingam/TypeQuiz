@@ -103,6 +103,7 @@ $('button.choice').click(function(e) {
 $(".restartGame").click(function(){
     $('.questionCount').text("1");
     $('.scorePercentage').text("0");
+    $('.feedback').text("Awesome! Keep doing the quiz till you get a perfect score!");
     quiz.reset();
     //Reset First question to Garamond
     renderText(quiz.getCurrentQuestion());
