@@ -90,10 +90,10 @@ $('button.choice').click(function(e) {
     var choice = $(e.target).text();
     var question = quiz.getCurrentQuestion(); 
     // check if the answer is right and update question number and score
-    question.answer = choice;    // pass the user's choice to the question object
-    $('.questionCount').text(quiz.getTotalCorrect());
-    $('.scorePercentage').text(quiz.getScore());
-    quiz.getNextQuestion();    // load the next question
+    question.answer = choice; // pass the user's choice to the question object
+    $('.questionCount').text(quiz.getTotalCorrect(" "));
+    $('.scorePercentage').text(quiz.getScore(" "));
+    quiz.getNextQuestion(); // load the next question
 });
 
 // Feedback
@@ -111,8 +111,8 @@ var introLine = function(text, color){ /*--- to change the feedback everytime us
 
 // Restart button
 $(".restartGame").click(function(){
-    $('.questionCount').text(" 1 ");
-    $('.scorePercentage').text(" 0");
+    $('.questionCount').text("1");
+    $('.scorePercentage').text("0");
     // reset the quiz
     introLine(); //Replaces current header
 });
