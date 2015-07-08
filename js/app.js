@@ -43,7 +43,7 @@ var Question = function(options) {
 };
 
 Question.prototype = {
-    answer: function(choice) {
+    setAnswer: function(choice) {
         this.answer = choice;
     },
     isCorrect: function() {
@@ -91,8 +91,8 @@ $('button.choice').click(function(e) {
     var question = quiz.getCurrentQuestion(); 
     // check if the answer is right and update question number and score
     question.answer = choice; // pass the user's choice to the question object
-    $('.questionCount').text(quiz.getTotalCorrect(" "));
-    $('.scorePercentage').text(quiz.getScore(" "));
+    $('.questionCount').text(quiz.getTotalCorrect());
+    $('.scorePercentage').text(quiz.getScore());
     quiz.getNextQuestion(); // load the next question
 });
 
