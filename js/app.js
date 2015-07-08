@@ -99,22 +99,13 @@ $('button.choice').click(function(e) {
     renderButtons(quiz.getCurrentQuestion()); // render new button
 });
 
-// Feedback
-
-
-var wrong = function(text, color){ /*--- to change the feedback everytime user enters number ---*/
-    $(".feedback").text("Wrong!");
-}
-
-var introLine = function(text, color){ /*--- to change the feedback everytime user enters number ---*/
-    $(".feedback").text("Let the games begin!");
-}
-
 // Restart button
 $(".restartGame").click(function(){
     $('.questionCount').text("1");
     $('.scorePercentage').text("0");
     //Reset First question to Garamond
+    renderText(quiz.getCurrentQuestion(Question[0]));
+    renderButtons(quiz.getCurrentQuestion(Question[0]));
 });
 
 });
