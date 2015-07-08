@@ -28,7 +28,7 @@ Quiz.prototype = {
     },
     getNextQuestion: function() {
         // only increment the counter if there is another question
-        if (this.current < this.questions.length) {
+        if (this.current < this.questions.length - 1) {
             this.current++;
         }
         return this.questions[this.current];
@@ -91,21 +91,25 @@ $('button.choice').click(function(e) {
     var choice = $(e.target).text();
     var question = quiz.getCurrentQuestion(); 
     // check if the answer is right and update question number and score
-    question.answer = choice; // pass the user's choice to the question object
+    question.setAnswer(choice); // pass the user's choice to the question object
     $('.questionCount').text(quiz.getTotalCorrect());
     $('.scorePercentage').text(quiz.getScore());
-    quiz.getNextQuestion(); // load the next question
-    renderText(quiz.getCurrentQuestion()); // render new font
-    renderButtons(quiz.getCurrentQuestion()); // render new button
+    question = quiz.getNextQuestion(); // load the next question
+    renderText(question); // render new font
+    renderButtons(question); // render new button
 });
 
 // Restart button
 $(".restartGame").click(function(){
     $('.questionCount').text("1");
     $('.scorePercentage').text("0");
-    //Reset First question to Garamond
-    renderText(quiz.getCurrentQuestion(Question[0]));
-    renderButtons(quiz.getCurrentQuestion(Question[0]));
+    quiz.reset(); //Reset First question to Garamond
+    renderText(quiz.getCurrentQuestion());
+    renderButtons(quiz.getCurrentQuestion());
 });
+
+// initialize
+renderText(quiz.getCurrentQuestion());
+renderButtons(quiz.getCurrentQuestion());
 
 });
