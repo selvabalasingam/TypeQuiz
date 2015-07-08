@@ -82,7 +82,7 @@ var renderText = function(question) {
 
 // Button
 var renderButtons = function(question) { // set the answer on the question object
-    var choices = quiz.questions[0].choices; 
+    var choices = question.choices; 
     $('button.choice').each(function(i) {
         $(this).text(choices[i]);
     });
