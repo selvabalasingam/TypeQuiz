@@ -90,16 +90,10 @@ $('button.choice').click(function(e) {
     var choice = $(e.target).text();
     var question = quiz.getCurrentQuestion(); 
     // check if the answer is right and update question number and score
-    if (Question.answer == choice) {
-        getTotalCorrect = $('.questionCount').text(getTotalCorrect+1); 
-        getScore = $('.scorePercentage').text(getScore);
-    }
-    else {
-        getTotalCorrect = $('.questionCount').text(getTotalCorrect+0); 
-        getScore = $('.scorePercentage').text(getScore);
-    }
-    // then go to the next question
-    getNextQuestion();
+    question.answer = choice; // pass the user's choice to the question object
+    $('.questionCount').text(quiz.getTotalCorrect());
+    $('.scorePercentage').text(quiz.getScore());
+    quiz.getNextQuestion(); // load the next question
 });
 
 // Feedback
