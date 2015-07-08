@@ -103,7 +103,8 @@ $('button.choice').click(function(e) {
 $(".restartGame").click(function(){
     $('.questionCount').text("1");
     $('.scorePercentage').text("0");
-    quiz.reset(); //Reset First question to Garamond
+    quiz.reset();
+    //Reset First question to Garamond
     renderText(quiz.getCurrentQuestion());
     renderButtons(quiz.getCurrentQuestion());
 });
