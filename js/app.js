@@ -81,10 +81,12 @@ var renderText = function(question) {
 };
 
 // Button
-var choices = quiz.questions[0].choices; // set the answer on the question object
-$('button.choice').each(function(i) {
-    $(this).text(choices[i]);
-}); 
+var renderButtons = function(question) { // set the answer on the question object
+    $('button.choice').each(function(i) {
+        $(this).text(choices[i]);
+        renderButtons(quiz.getCurrentQuestion());
+    });
+};
 
 $('button.choice').click(function(e) {
     var choice = $(e.target).text();
